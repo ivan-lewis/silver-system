@@ -53,21 +53,7 @@ body {
   padding: var(--input-padding-y) var(--input-padding-x);
 }
 
-.form-label-group > label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  margin-bottom: 0; /* Override default `<label>` margin */
-  line-height: 1.5;
-  color: #495057;
-  cursor: text; /* Match the input under the label */
-  border: 1px solid transparent ;
-	border-color: #31a150;
-  border-radius: .25rem;
-  transition: all .1s ease-in-out;
-}
+
 
 .form-label-group input::-webkit-input-placeholder {
   color: transparent;
@@ -98,22 +84,7 @@ body {
   padding-top: calc(var(--input-padding-y) / 3);
   padding-bottom: calc(var(--input-padding-y) / 3);
   font-size: 12px;
-  color: #777;
-}
-/*
-.form-control {
-    display: block;
-    width: 100%;
-    padding: .275rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #cccccc;
-    background-color: transparent;
-    background-clip: padding-box;
-    border: 1px solid ##31d133;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-*/
+  color: #31d133;
 }
 
 /* Fallback for Edge
@@ -123,7 +94,7 @@ body {
     display: none;
   }
   .form-label-group input::-ms-input-placeholder {
-    color: #777;
+    color: #31d133;
   }
 }
 
@@ -134,8 +105,29 @@ body {
     display: none;
   }
   .form-label-group input:-ms-input-placeholder {
-    color: #777;
+    color: #31d133;
   }
 }
+select.form-control:focus::-ms-value {
+  color: #31d133;
+  background-color: #000;
+}
 
+.form-control::placeholder {
+  color: #31d133;
+  opacity: 1;
+}
+
+select.form-control:focus::-ms-value {
+  color: #31d133;
+  background-color: #000;
+}
+
+.form-control:focus {
+  color: #31d133;
+  background-color: #000;
+  border-color: #31d133;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
 

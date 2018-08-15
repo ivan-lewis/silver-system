@@ -9,6 +9,14 @@ a:hover {
   color: #31d133;
 }
 
+a.btn,
+a.btn:focus,
+a.btn:hover,
+a.btn:active,{
+  color: #31d133;
+  border: none !important;
+}
+
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
@@ -48,7 +56,7 @@ body {
  * Header
  */
 .masthead {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .masthead-brand {
@@ -123,4 +131,45 @@ table {
 .hori {
   border-top: 2px solid #31a150;
   border-bottom: 2px solid #31a150;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  /* position: fixed; Stay in place */
+  z-index: 1002; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  /* left: 0;
+  top: 0; */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  /* background-color: rgba(0,0,0,0.0); Black w/ opacity */
+  border: 20px dashed #31d133;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #000000;
+  margin: auto;
+  padding: 20px;
+  
+  width: 60%;
+}
+
+/* The Close Button */
+.close {
+  color: #31d133;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

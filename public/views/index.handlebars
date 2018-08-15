@@ -1,46 +1,37 @@
-
-<div class="row">
-  <center>
-    <!-- Left side (ready to eat) -->
-    <div class="col-md-6">
-      <h4 class="red_font">Ready :) !</h4>
-      <div id="ready_to_eat">
-
-        <!-- Dynamically Insert Ready Burgers Here -->
-        {{#each burgers}}
-          {{#unless devoured}}
-          <form action="burger/eat/{{id}}" method="POST">
-            <div class="input-group">
-              <li class="form-control">{{id}}. {{burger_name}}</li>
-                <span class="input-group-btn">
-                  <button class="btn btn-success devour-button" type="submit">Devour It!</button>
-                </span>
-            </div>
-          </form>
-          {{/unless}}
-        {{/each}}
-
+    <form class="form-signin">
+      <div class="text-center mb-4">
+      <h1 class="cover-heading mb-5"><img src="images/avatar2.svg" alt=""  class="mr-2" height="100px" width="100px"></h1>
+        <h1 class="h3 mb-3 font-weight-normal">TiTaTo</h1>
+        <p>Sign in or  <a href="#">Register Here</a></p>
       </div>
-    </div>
-
-    <!-- Right side (already eaten) -->
-    <div class="col-md-6">
-      <h4 class="red_font">Eaten :( !</h4>
-      <div id="already_eaten">
-
-        <!-- Dynamically Insert Eaten Burgers Here -->
-        {{#each burgers}}
-          {{#if this.devoured}}
-            <div class="input-group">
-              <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
-              <span class="input-group-btn">
-                <button class="btn btn-info growl-button" type="button">Hunger Growl!</button>
-              </span>
-            </div>
-          {{/if}}
-        {{/each}}
-
+      
+          <div class="form-label-group">
+        <input type="text" id="inputUserName" class="form-control" placeholder="User Name" autofocus required >
+        <label for="inputEmail">User Name</label>
       </div>
-    </div>
-  </center>
-</div>
+
+<!--
+      <div class="form-label-group">
+        <input type="email" id="inputUserEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputEmail">Email address</label>
+      </div>
+-->
+
+      {{!-- <div class="form-label-group">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" autofocus required>
+        <label for="inputPassword">Password</label>
+      </div> --}}
+
+      {{!-- <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div> --}}
+<!--      <button id="" class="btn btn-lg btn-secondary btn-block" type="submit">Sign in</button>-->
+      <h3 class="mt-5 mb-3 text-center" ><a href="/" id="login-user"  >SIGN IN</a></h3>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; 2018</p>
+    </form>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     {{!-- <script src="js/userlogin.js"></script> --}}

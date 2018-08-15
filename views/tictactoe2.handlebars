@@ -1,26 +1,4 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <!--    <link rel="icon" href="../../../../favicon.ico">-->
-
-  <title>TiTaTo Busters</title>
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <!--    <link href="css/cover.css" rel="stylesheet">-->
-  <link href="css/style_ad.css" rel="stylesheet">
-</head>
-
-<body class="text-center">
-
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-3">
       <div class="inner">
         <h3 class="masthead-brand">TiTaTo</h3>
@@ -44,40 +22,30 @@
         <a href="#"  id="myBtn" class=" "><img src="images/newgame.png" alt="" class=""  height="100px" width="100px"></a>
 
       </p>
-      <p class="lead mb-3">or </p>
+      {{!-- <p class="lead mb-3">or </p> --}}
 
 
-
-      <div class="my-3 p-3 bg-black rounded shadow-sm">
+<div class="my-3 p-3 bg-black rounded shadow-sm">
+  <p class="lead mb-3">or </p>
         <h4 style="border-bottom: dashed; border-color: #e8b46a " class="  pb-2 mb-0">Join Active Games</h4>
-        <ul  style="list-style-type: none">
-          <li>
-        <div class="media  pt-3">
-          <img src="images/avatar2.svg" alt="" class="mr-2 mt-2" height="50px" width="50px">
-          <p class="media-body pb-3 mb-0 small lh-125  text-left" style="border-bottom: dashed; border-color: #e8b46a ">
+            <div class="media  pt-3">
+        <img src="images/avatar2.svg" alt="" class="mr-2 mt-2" height="50px" width="50px">
+        <p class="media-body pb-3 mb-0 small lh-125  text-left" style="border-bottom: dashed; border-color: #e8b46a ">
             <strong>@username</strong>
             <a href="tictactoe3.html" class=" float-right  ">Join</a>
+        </p>
+    </div>
+ <ul>
+  {{#each gameusers}}
+    
+      {{> gameuser-block}}
+  
+  {{/each}}
+</ul>
+</div>
 
 
-          </p>
-       
-        </div>
-      </li>
-      <li>
-        <div class="media  pt-3">
-          <img src="images/avatar2.svg" alt="" class="mr-2" height="50px" width="50px">
-          <p class="media-body pb-3 mb-0 small lh-125  text-left " style="border-bottom: dashed; border-color: #e8b46a ">
-            <strong>@username</strong>
-            <a href="tictactoe3.html" class=" float-right  ">Join</a>
 
-
-          </p>
-        </div>
-      </li>
-      </ul>
-
-
-      </div>
       <!--  Modal -->
       <div id="myModal" class="modal">
 
@@ -97,19 +65,19 @@
                 <img src="images/avatar2.svg" alt="" class="mr-2 mt-2" height="50px" width="50px">
                 <p class="media-body pb-3 mb-0 small lh-125  text-left" style="border-bottom: dashed; border-color: #e8b46a ">
                   <strong>Player 1</strong>
-                  <a href="tictactoe3.html" class=" float-right  ">You</a>
+                  <a href="/" class=" float-right  ">You</a>
 
 
                 </p>
               </div>
               <div class="media  pt-3">
-                <img src="images/avatar2.svg" alt="" class="mr-2" height="50px" width="50px">
+                <img src="images/avatar2.svg" alt="" class="" height="50px" width="50px">
                 <p class="media-body pb-3 mb-0 small lh-125  text-left " style="border-bottom: dashed; border-color: #e8b46a ">
                   <strong>Player 2</strong>
-                  <a href="tictactoe3.html" class=" float-right  ">Selecting</a>
+                  <a href="/" class=" float-right  ">Selecting</a>
               </div>
               <h1 class="cover-heading mb-5">
-                  <a href="tictactoe3.html" class=""> <img src="images/start.png" alt="" class="mr-2 mt-3" height="100px" width="100px"> </a>
+                  <a href="/" class=""> <img src="images/start.png" alt="" class="mr-2 mt-3" height="100px" width="100px"> </a>
                 </h1>
             </div>
           </div>
@@ -161,9 +129,6 @@
     }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script> -->
+  {{!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> --}}
   <script src="assets/js/vendor/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-</body>
-
-</html>
